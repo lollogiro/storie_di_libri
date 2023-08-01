@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Zona negoziante</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="./js/generale.js"></script>
+        <script type="text/javascript" src="./js/admin.js"></script>
+        <link rel="stylesheet" type ="text/css" href="./css/grafica.css">
+        <!-- reset css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" />
+        <!-- Font API -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap" rel="stylesheet">
+        <!--Font Awesome-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo">
+                <a href="../index.html"><img src="./icons/bookshelf.png" alt="Storie di Libri"  width="60px" height="60px"></a>
+            </div>
+        </div>
+        
+        <div class="hero hero--small">
+            <div class="hero__content">
+                <h1 class="big-text">Effettua il login da negoziante</h1>
+            </div>
+        </div>
+
+        <div class="content center">
+            <form method="POST">
+                <div class="txt-field">
+                    <input type="text" id="email" required>
+                    <span></span>
+                    <label for="email">Email</label>
+                </div>
+                <div class="txt-field">
+                    <input type="password" id="password" required>
+                    <span></span>
+                    <label for="password">Password</label>
+                    <span onclick="showPassword()">
+                        <i id="eye-open" class="fa fa-eye"></i>
+                        <i id="eye-close" class="fa fa-eye-slash"></i>
+                    </span>
+                </div>
+                <input type="button" id="submit" value="Accedi" class="btn">
+                <div class="signup-link">
+                    Non sei un negoziante?
+                    <a href="./">Vai alla home</a>
+                </div>
+            </form>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+            $( document ).ready(function(){
+                $(".hamburger").on('click', function(){
+                    $(".menu").toggleClass("menu--open");
+                });
+                $(".hamburger").click(function () {
+                    $(".center").toggleClass("none");
+                });
+            });
+        </script>
+        
+    </body>
+</html>

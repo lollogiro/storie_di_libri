@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Visualizza prestiti</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type ="text/css" href="../css/grafica.css">
+        <!-- reset css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" />
+        <!-- font api -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap" rel="stylesheet">
+        
+        <script type="text/javascript" src="../js/generale.js"></script>
+        <script type="text/javascript" src="../js/adminVisualizzaPrestiti.js"></script>
+    </head>
+    <body>
+
+        <div class="header">
+            <div class="logo">
+                <a href="./adminHome.html"><img src="../icons/bookshelf.png" alt="Storie di Libri"  width="60px" height="60px"></a>
+            </div>
+                <ul class="menu">
+                    <li><a href="./adminHome.html">Home</a></li>
+                    <li><a href="./adminLibri.html">Libri</a></li>
+                    <li><a href="">Vetrina</a></li>
+                    <div id="logoutTendina" onclick="logoutProfile()">
+                        <li id="tendina"><a href="../" onclick="logoutProfile()" class="iconeScritta">Logout</a></li><br>
+                    </div>
+                </ul>
+                <div class="iconeContainer" id="logout" onclick="logoutProfile()">
+                    <a href="../" onclick="logoutProfile()"><img class="icone" src="../icons/logout.png" width="50px" height="50px"></a>
+                    <a href="../" onclick="logoutProfile()" class="iconeScritta">Logout</a>
+                </div>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero hero--verysmall">
+            <div class="hero__content">
+                <h1 class="big-text">Visualizza i prestiti che ti interessano</h1>
+            </div>
+        </div>
+
+        <div class="content">
+            <h3 class="med-text">Inserisci i dati del prestito da visualizzare</h3>
+            <div class="form-container">
+                <ul class="flex-outer">
+                    <li>
+                      <label for="1">Cerca per email</label>
+                      <input type="radio" name="criterio" value="email" id="1">
+                    </li>
+                    <li>
+                      <label for="2">Cerca per data</label>
+                      <input type="radio" name="criterio" value="data" id="2">
+                    </li>
+                    <li>
+                      <label for="email">Email</label>
+                      <input type="text" id="email" placeholder="Email">
+                    </li>
+                    <li>
+                      <label for="data">Data di inizio o fine prestito</label>
+                      <input type="date" id="data">
+                    </li>
+                    <li>
+                      <input type="button" class="btn" id="submit" value="Cerca">
+                    </li>
+                </ul>
+            </div>
+            <div class="table-container">
+                <table id="tabellaMostra">
+                    
+                </table>
+            </div>
+            <div id="emptyDB" class="normal-text"></div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+            $( document ).ready(function(){
+                $(".hamburger").on('click', function(){
+                    $(".menu").toggleClass("menu--open");
+                });
+                $(".hamburger").click(function () {
+                    $(".center").toggleClass("none");
+                });
+            });
+        </script>
+        
+    </body>
+</html>

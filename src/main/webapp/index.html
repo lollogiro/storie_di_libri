@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="./js/generale.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
+        <link rel="stylesheet" type ="text/css" href="./css/grafica.css">
+        <!-- reset css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" />
+        <!-- flickity slider -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css" integrity="sha512-BiFZ6oflftBIwm6lYCQtQ5DIRQ6tm02svznor2GYQOfAlT3pnVJ10xCrU3XuXnUrWQ4EG8GKxntXnYEdKY0Ugg==" crossorigin="anonymous" />
+        <!-- font api -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="header">
+            <div class="logo">
+                <a href="./index.html"><img src="./icons/bookshelf.png" alt="Storie di Libri"  width="60px" height="60px"></a>
+            </div>
+                <ul class="menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./html/libri.html">Libri</a></li>
+                    <li><a href="">Contatti</a></li>
+                    <div id="profiloTendina">
+                        <li id="tendina"><a href="./html/dashboard.html" class="iconeScritta">Profilo</a></li>
+                    </div>
+                    <div id="carrelloTendina">
+                        <li id="tendina"><a href="./html/carrello.html" class="iconeScritta">Carrello</a></li><br>
+                    </div>
+                    <div id="loginTendina">
+                        <li id="tendina" ><a href="./html/login.html" class="iconeScritta">Login</a></li><br>
+                    </div>
+                    <div id="logoutTendina" onclick="logoutProfile()">
+                        <li id="tendina"><a href="" class="iconeScritta" onclick="logoutProfile()">Logout</a></li><br>
+                    </div>
+                </ul>
+                <div class="iconeContainer" id="profilo">
+                    <a href="./html/dashboard.html" ><img class="icone" src="./icons/profile.png" width="50px" height="50px"></a>
+                    <a href="./html/dashboard.html" class="iconeScritta">Profilo</a>
+                </div>
+                <div class="iconeContainer" id="carrello">
+                    <a href="./html/carrello.html" ><img class="icone" src="./icons/carrello.png" width="50px" height="50px"></a>
+                    <a href="./html/carrello.html" class="iconeScritta">Carrello</a>
+                </div>
+                <div class="iconeContainer" id="login">
+                    <a href="./html/login.html"><img class="icone" src="./icons/login.png" width="50px" height="50px"></a>
+                    <a href="./html/login.html" class="iconeScritta">Login</a>
+                </div>
+                <div class="iconeContainer" id="logout" onclick="logoutProfile()">
+                    <a href="./" onclick="logoutProfile()"><img class="icone" src="./icons/logout.png" width="50px" height="50px"></a>
+                    <a href="./" onclick="logoutProfile()" class="iconeScritta">Logout</a>
+                </div>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+        </div>
+
+        <div class="hero">
+            <div class="hero__content">
+                <p class="intro-text">Benvenuto/a nello store di</p>
+                <h1 class="big-text">Storie di Libri</h1>
+                <a href="./html/register.html" class="button">Registrati subito!</a>
+            </div>
+        </div>
+
+        
+
+        <div class="grid">
+            <div class="col">
+                <h3 class="big-text">Ecco i nostri<br/>nuovi arrivi!</h3>
+                
+            </div>
+            <div class="col">
+                <p>I nuovi arrivi di questa settimana!</p>
+            </div>
+        </div>
+
+        <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+            <div class="carousel-cell" id="cell1"><img src="./images/vetrina.jpg" alt=""></div>
+            <div class="carousel-cell" id="cell2"><img src="./images/tex.jpg" alt=""></div>
+            <div class="carousel-cell" id="cell3"><img src="./images/bluray.jpg" alt=""></div>
+            <div class="carousel-cell" id="cell4"><img src="./images/libri.jpg" alt=""></div>
+            <div class="carousel-cell" id="cell5"><img src="./images/stanzino.jpg" alt=""></div>
+            <div class="carousel-cell" id="cell6"><img src="./images/negozio_dentro.jpg" alt=""></div>
+        </div>
+
+        <div class="poster">
+            <div class="poster__img">
+                <img src="./images/negozio_fuori.jpg" alt="">
+            </div>
+            <div class="poster__content">
+                <h3 class="med-text">Veniteci a trovare anche in negozio!</h3>
+                <!-- <p>uuuauauaua aua ua ua uauuauaua aua uaua ua a</p> -->
+                <a href="tel:+393245369600" class="button">Contattaci</a>
+            </div>
+        </div>
+        <!--<footer class="footer">
+            <h1 class="big-text">Storie di Libri</h1>
+            <div class="grid">
+                <div class="col">
+                    <h4 class="med-text">Contatti</h4>
+                    <p class="small-text">Paragrafo</p>
+                </div>
+                <div class="col">
+                    <h4 class="med-text">Titolo</h4>
+                    <p class="small-text">Paragrafo</p>
+                </div>
+                <div class="col">
+                    <h4 class="med-text">Titolo</h4>
+                    <p class="small-text">Paragrafo</p>
+                </div>
+                <div class="col">
+                    <h4 class="med-text">Titolo</h4>
+                    <p class="small-text">Paragrafo</p>
+                </div>
+            </div>
+        </footer>-->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js" integrity="sha512-cA8gcgtYJ+JYqUe+j2JXl6J3jbamcMQfPe0JOmQGDescd+zqXwwgneDzniOd3k8PcO7EtTW6jA7L4Bhx03SXoA==" crossorigin="anonymous"></script>
+        
+        <script>
+            $( document ).ready(function(){
+                $(".hamburger").on('click', function(){
+                    $(".menu").toggleClass("menu--open");
+                });
+                $(".hamburger").click(function () {
+                    $(".center").toggleClass("none");
+                    $(".main-carousel").toggleClass("none");
+                });
+
+
+            });
+        </script>
+
+    </body>
+</html>

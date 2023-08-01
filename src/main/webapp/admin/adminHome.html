@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="../js/generale.js"></script>
+        <script type="text/javascript" src="../js/adminHome.js"></script>
+        <link rel="stylesheet" type ="text/css" href="../css/grafica.css">
+        <!-- reset css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" />
+        <!-- flickity slider -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css" integrity="sha512-BiFZ6oflftBIwm6lYCQtQ5DIRQ6tm02svznor2GYQOfAlT3pnVJ10xCrU3XuXnUrWQ4EG8GKxntXnYEdKY0Ugg==" crossorigin="anonymous" />
+        <!-- font api -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="header">
+            <div class="logo">
+                <a href="./adminHome.html"><img src="../icons/bookshelf.png" alt="Storie di Libri"  width="60px" height="60px"></a>
+            </div>
+                <ul class="menu">
+                    <li><a href="./adminHome.html">Home</a></li>
+                    <li><a href="./adminLibri.html">Libri</a></li>
+                    <li><a href="">Vetrina</a></li>
+                    <div id="logoutTendina" onclick="logoutProfile()">
+                        <li id="tendina"><a href="../" class="iconeScritta">Logout</a></li><br>
+                    </div>
+                </ul>
+                <div class="iconeContainer" id="logout" onclick="logoutProfile()">
+                    <a href="../"><img class="icone" src="../icons/logout.png" width="50px" height="50px"></a>
+                    <a href="../" class="iconeScritta">Logout</a>
+                </div>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+        </div>
+
+        <div class="hero hero--small">
+            <div class="hero__content">
+                <p class="intro-text">Benvenuto/a nella parte del negoziante di</p>
+                <h1 class="big-text">Storie di Libri</h1>
+            </div>
+        </div>
+
+        
+        <div class="grid">
+            <div class="col">
+                <h3 class="big-text">Demo<br/>nuovi arrivi!</h3>
+            </div>
+            <div class="col">
+                <p>I nuovi arrivi di questa settimana!</p>
+            </div>
+        </div>
+
+        <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+            <div class="carousel-cell" id="cell1"><img src="../images/vetrina.jpg" alt=""></div>
+            <div class="carousel-cell" id="cell2"><img src="../images/tex.jpg" alt=""></div>
+            <div class="carousel-cell" id="cell3"><img src="../images/bluray.jpg" alt=""></div>
+            <div class="carousel-cell" id="cell4"><img src="../images/libri.jpg" alt=""></div>
+            <div class="carousel-cell" id="cell5"><img src="../images/stanzino.jpg" alt=""></div>
+            <div class="carousel-cell" id="cell6"><img src="../images/negozio_dentro.jpg" alt=""></div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js" integrity="sha512-cA8gcgtYJ+JYqUe+j2JXl6J3jbamcMQfPe0JOmQGDescd+zqXwwgneDzniOd3k8PcO7EtTW6jA7L4Bhx03SXoA==" crossorigin="anonymous"></script>
+        
+        <script>
+            $( document ).ready(function(){
+                $(".hamburger").on('click', function(){
+                    $(".menu").toggleClass("menu--open");
+                });
+                $(".hamburger").click(function () {
+                    $(".center").toggleClass("none");
+                    $(".main-carousel").toggleClass("none");
+                });
+
+
+            });
+        </script>
+
+    </body>
+</html>
